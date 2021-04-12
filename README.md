@@ -68,10 +68,19 @@
 
         sorted_list = sorted(sale_prices1)
         num_of_sales = len(sorted_list)
-        half_slice = math.floor(num_of_sales/2)
+        
+
+<h3>Primero dividimos la lista en dos partes. La solución total que calculamos nos devuelve un número entero, pero no necesitamos un decimal, así que usamos la variable floor( ) para redondear el total, a la solución en número menor</h3>
+
+
+        half_slice = math.floor(num_of_sales/2) 
+        
         first_sales_items = sorted_list[:half_slice]
+        
         last_sales_items = sorted_list[-(half_slice):]
+        
         median = sorted_list[half_slice:(half_slice + 1)]
+
 
 <h3>Final solution</h3>
 
