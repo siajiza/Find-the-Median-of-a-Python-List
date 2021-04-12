@@ -6,7 +6,7 @@
     sales_prices = [
         100,
         83,
-        22,
+        220,
         40,
         100,
         400,
@@ -20,7 +20,7 @@
 
 
     print(sales_prices)
-    [100, 83, 22, 40, 100, 400, 10, 1, 3]
+    [100, 83, 220, 40, 100, 400, 10, 1, 3]
 
 
 <h3>Ordering the list from low to high prices.</h3>
@@ -29,7 +29,7 @@
     sorted_sales_prices = sorted(sales_prices)
 
     print(sorted_sales_prices)
-    [1, 3, 10, 22, 40, 83, 100, 100, 400]
+    [1, 3, 10, 40, 83, 100, 100, 220, 400]
     
     
 <h3>We have to find out the total number of sales, and calculated the midle</h3>
@@ -45,7 +45,7 @@
     central_total_prices_sales = sorted_sales_prices[4]
 
     print(central_total_prices_sales)
-    40 # the sales prices on the midle
+    83 # the sales prices on the midle
 
 
 
@@ -56,16 +56,36 @@
     sales_prices_right = sorted_sales_prices[5:]
 
     print(sales_prices_left)
-    [1, 3, 10, 22]
+    [1, 3, 10, 40]
     
     print(sales_prices_right)
-    [1, 3, 10, 22]
+    [100, 100, 220, 400]
 
 
 <h3>Other way to know the final solution</h3>
 
+        import math
+
+        sorted_list = sorted(sale_prices1)
+        num_of_sales = len(sorted_list)
+        half_slice = math.floor(num_of_sales/2)
+        first_sales_items = sorted_list[:half_slice]
+        last_sales_items = sorted_list[-(half_slice):]
+        median = sorted_list[half_slice:(half_slice + 1)]
+
+<h3>Final solution</h3>
 
 
+        print(first_sales_items)
+        [1, 3, 10, 40]
+        
+        print(last_sales_items)
+        [100, 100, 220, 400]
+        
+        print(median)
+        [83]
+ 
+ 
 
 
 
